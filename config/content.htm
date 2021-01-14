@@ -29,7 +29,8 @@
 <p>41-50</p>
 <p><img alt="" height="322" src="/images/41-50-1.gif" width="600"/></p>
 <p></p>
-<p></p><h2>w4-6</h2>
+<p></p>
+<h2>w4-6</h2>
 <p>零件繪製(小組、個人)</p>
 <h3>Onshape</h3>
 <p>pdf1:Onshape 使用 1 inch 繪製</p>
@@ -57,7 +58,8 @@
 <p>41-50</p>
 <p><img alt="" height="295" src="/images/41-50.gif" width="600"/></p>
 <p></p>
-<p></p><h2>w7</h2>
+<p></p>
+<h2>w7</h2>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Z0C5vj0Yw10" width="560"></iframe></p>
 <p><img alt="" height="315" src="/images/等角視圖.png" width="560"/></p>
 <p><img alt="" height="315" src="/images/前視圖.png" width="560"/></p>
@@ -70,13 +72,67 @@
 <h3>RokiSim</h3>
 <p></p>
 <p>試用RokiSim</p>
-<p><img alt="" height="338" src="/images/RoKiSim_KYr127ljLf.png" width="600"/></p><h2>w9</h2>
+<p><img alt="" height="338" src="/images/RoKiSim_KYr127ljLf.png" width="600"/></p>
+<h2>w9</h2>
 <h2>w10-18</h2>
 <p>小組任務開始 小組倉儲:<a href="https://github.com/40823245/cad2020bg2">https://github.com/40823245/cad2020bg2</a></p>
 <p>進度:12/04 使用gitter進行討論，並錄製過程和截圖</p>
 <p>       12/11 討論並投票圖檔的版本</p>
 <p>       12/24 修改圖檔和模擬</p>
-<p>       01/07 程式模擬和做動模擬</p><h3>12.04</h3>
+<p>       01/07 程式模擬和做動模擬</p>
+<h3>12.04</h3>
 <h3>12.11</h3>
 <h3>12.24</h3>
 <h3>1.7</h3>
+<h1>設定ssh</h1>
+<p></p>
+<p>一、製作金鑰</p>
+<p>點選資料夾的Portablegit&gt;bin&gt;sh.exe</p>
+<p><img alt="" height="281" src="/images/ssh1.png" width="500"/></p>
+<p>輸入ssh-keygen -t rsa -b 4096 -C "40823222"</p>
+<p></p>
+<p>案enter&gt;輸入/y/tmp/id_rsa&gt;案2次enter</p>
+<p><img alt="" height="281" src="/images/ssh2.png" width="500"/></p>
+<p></p>
+<p>將start移到白窗 並新增</p>
+<p>set GIT_HOME=%Disk%:\Portablegit\bin\<br/>set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<p><img alt="" height="521" src="/images/ssh3.png" width="400"/></p>
+<p>打開fall2020資料夾&gt;data&gt;tmp&gt;cad2020 </p>
+<p>打開隱藏的項目 .git資料夾，把config移到白窗</p>
+<p><img alt="" height="521" src="/images/ssh4.png" width="400"/></p>
+<p>新增[remote "origin"]裡的url= git@github.com:40823222/cad2020.git</p>
+<p>file&gt;save</p>
+<p>打開putty資料的puttygen.exe</p>
+<p></p>
+<p>點load，找到id_rsa</p>
+<p>案是&gt;save private key&gt;案是&gt;輸入學號</p>
+<p></p>
+<p>打開putty.exe</p>
+<p><img alt="" height="451" src="/images/ssh5.png" width="500"/></p>
+<p>在Host Name和Save Sessions打github.com案save</p>
+<p></p>
+<p>設定proxy，若是使用自家網路、手機網路選None)</p>
+<p></p>
+<p>打開SSH裡面的Auth</p>
+<p>選擇金鑰檔案(.ppk)</p>
+<p>回到session點選save再open</p>
+<p><img alt="" height="451" src="/images/ssh6.png" width="500"/></p>
+<p></p>
+<p>在home新增.ssh資料夾</p>
+<p>輸入指令並複製到白窗另存config</p>
+<p></p>
+<p>ProxyCommand y:/putty/plink.exe github.com %h %p<br/> <br/>Host github.com<br/> User git<br/> Port 22<br/> Hostname github.com<br/> <br/> TCPKeepAlive yes<br/> IdentitiesOnly yes</p>
+<p></p>
+<p>到倉儲網頁上的Settings新增金鑰</p>
+<p>點選New SSH key</p>
+<p><img alt="" height="246" src="/images/ssh7.png" width="500"/></p>
+<p></p>
+<p><span>到tmp找到id_rsa.pub並用白窗開啟，複製內容到key</span></p>
+<p><span><img alt="" height="246" src="/images/ssh8.png" width="500"/></span></p>
+<p></p>
+<p>案Add SSH key</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class="line number1 index0 alt2"><code class="html plain"></code></div>

@@ -133,8 +133,58 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">12.11 << <a href='12.11.html'>Previous</a> <a href='1.7.html'>Next</a> >> 1.7<br /><h1>12.24</h1>
-<br />12.11 << <a href='12.11.html'>Previous</a> <a href='1.7.html'>Next</a> >> 1.7</div>
+    <div id="tipue_search_content">1.7 << <a href='1.7.html'>Previous</a> <br /><h1>設定ssh</h1>
+<p></p>
+<p>一、製作金鑰</p>
+<p>點選資料夾的Portablegit&gt;bin&gt;sh.exe</p>
+<p><img alt="" height="281" src="./../images/ssh1.png" width="500"/></p>
+<p>輸入ssh-keygen -t rsa -b 4096 -C "40823222"</p>
+<p></p>
+<p>案enter&gt;輸入/y/tmp/id_rsa&gt;案2次enter</p>
+<p><img alt="" height="281" src="./../images/ssh2.png" width="500"/></p>
+<p></p>
+<p>將start移到白窗 並新增</p>
+<p>set GIT_HOME=%Disk%:\Portablegit\bin\<br/>set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<p><img alt="" height="521" src="./../images/ssh3.png" width="400"/></p>
+<p>打開fall2020資料夾&gt;data&gt;tmp&gt;cad2020 </p>
+<p>打開隱藏的項目 .git資料夾，把config移到白窗</p>
+<p><img alt="" height="521" src="./../images/ssh4.png" width="400"/></p>
+<p>新增[remote "origin"]裡的url= git@github.com:40823222/cad2020.git</p>
+<p>file&gt;save</p>
+<p>打開putty資料的puttygen.exe</p>
+<p></p>
+<p>點load，找到id_rsa</p>
+<p>案是&gt;save private key&gt;案是&gt;輸入學號</p>
+<p></p>
+<p>打開putty.exe</p>
+<p><img alt="" height="451" src="./../images/ssh5.png" width="500"/></p>
+<p>在Host Name和Save Sessions打github.com案save</p>
+<p></p>
+<p>設定proxy，若是使用自家網路、手機網路選None)</p>
+<p></p>
+<p>打開SSH裡面的Auth</p>
+<p>選擇金鑰檔案(.ppk)</p>
+<p>回到session點選save再open</p>
+<p><img alt="" height="451" src="./../images/ssh6.png" width="500"/></p>
+<p></p>
+<p>在home新增.ssh資料夾</p>
+<p>輸入指令並複製到白窗另存config</p>
+<p></p>
+<p>ProxyCommand y:/putty/plink.exe github.com %h %p<br/> <br/>Host github.com<br/> User git<br/> Port 22<br/> Hostname github.com<br/> <br/> TCPKeepAlive yes<br/> IdentitiesOnly yes</p>
+<p></p>
+<p>到倉儲網頁上的Settings新增金鑰</p>
+<p>點選New SSH key</p>
+<p><img alt="" height="246" src="./../images/ssh7.png" width="500"/></p>
+<p></p>
+<p><span>到tmp找到id_rsa.pub並用白窗開啟，複製內容到key</span></p>
+<p><span><img alt="" height="246" src="./../images/ssh8.png" width="500"/></span></p>
+<p></p>
+<p>案Add SSH key</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class="line number1 index0 alt2"><code class="html plain"></code></div><br />1.7 << <a href='1.7.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
