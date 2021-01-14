@@ -67,11 +67,26 @@
 <p>下載並使用tcc、零件繪圖(小組、個人)、使用RoKiSim</p>
 <p></p>
 <h3>tcc</h3>
-<h3>RokiSim</h3>
+<p>修改start.bat裡的程式碼</p>
+<p>set path_portablegit=%Disk%:\Portablegit\bin;<br/>set path_julia=%Disk%:\julia-1.5.2\bin;<br/>set path_tcc=%Disk%:\tcc\;<br/> <br/>path=%Disk%:;%path_python%;%path_portablegit%;%path_julia%;%path_tcc%;%path%;</p>
+<p><img alt="" height="521" src="/images/tcc-1.png" width="400"/></p>
+<p></p>
+<p>重新開啟start.bat</p>
+<p>在黑窗輸入tcc，出現下圖代表成功</p>
+<p><img alt="" height="261" src="/images/tcc2.png" width="500"/></p>
+<p></p>
+<p>打開資料夾的cpp.properties 拉到白窗</p>
+<p><img alt="" height="521" src="/images/tcc4.png" width="400"/></p>
+<p></p>
+<p>找到476行，並修改</p>
+<p>ccopts=-pedantic -Os<br/>#cc=g++ $(ccopts) -c $(FileNameExt) -o $(FileName).o<br/>#ccc=gcc $(ccopts) -c $(FileNameExt) -o $(FileName).o<br/>cc=y:/tcc/tcc.exe -run<br/>ccc=y:/tcc/tcc.exe -run<br/> <br/>make.command=make<br/>command.compile.*.c=$(ccc) -std=c99<br/>command.build.*.c=$(make.command)<br/>command.build.*.h=$(make.command)<br/>command.clean.*.c=$(make.command) clean<br/>command.clean.*.h=$(make.command) clean<br/>command.go.*.c=$(cc) $(FileNameExt)<br/>#command.go.*.c=./$(FileName)<br/># To make the Go command both compile (if needed) and execute, use this setting:</p>
+<p><img alt="" height="521" src="/images/tcc1.png" width="400"/></p>
+<p>案save</p>
+<p>測試</p>
+<p><img alt="" height="521" src="/images/tcc5.png" width="400"/></p><h3>HW3</h3>
 <p></p>
 <p>試用RokiSim</p>
-<p><img alt="" height="338" src="/images/RoKiSim_KYr127ljLf.png" width="600"/></p>
-<h2>w9</h2>
+<p><img alt="" height="338" src="/images/RoKiSim_KYr127ljLf.png" width="600"/></p><h2>w9</h2>
 <h2>w10-18</h2>
 <p>小組任務開始 小組倉儲:<a href="https://github.com/40823245/cad2020bg2">https://github.com/40823245/cad2020bg2</a></p>
 <p>進度:12/04 使用gitter進行討論，並錄製過程和截圖</p>

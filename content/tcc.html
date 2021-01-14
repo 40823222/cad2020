@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li class='has-children'><a href='w1-3.html'>w1-3</a><ul class='dropdown'><li><a href='SOLIDWORKS.html'>SOLIDWORKS</a></li></ul><li class='has-children'><a href='w4-6.html'>w4-6</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a></li></ul><li><a href='w7.html'>w7</a><li class='has-children'><a href='w8.html'>w8</a><ul class='dropdown'><li><a href='tcc.html'>tcc</a><li><a href='RokiSim.html'>RokiSim</a></li></ul><li><a href='w9.html'>w9</a><li class='has-children'><a href='w10-18.html'>w10-18</a><ul class='dropdown'><li><a href='12.04.html'>12.04</a><li><a href='12.11.html'>12.11</a><li><a href='12.24.html'>12.24</a><li><a href='01.07.html'>01.07</a></li></li></ul></ul><li><a href='設定ssh.html'>設定ssh</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li class='has-children'><a href='w1-3.html'>w1-3</a><ul class='dropdown'><li><a href='SOLIDWORKS.html'>SOLIDWORKS</a></li></ul><li class='has-children'><a href='w4-6.html'>w4-6</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a></li></ul><li><a href='w7.html'>w7</a><li class='has-children'><a href='w8.html'>w8</a><ul class='dropdown'><li><a href='tcc.html'>tcc</a><li><a href='HW3.html'>HW3</a></li></ul><li><a href='w9.html'>w9</a><li class='has-children'><a href='w10-18.html'>w10-18</a><ul class='dropdown'><li><a href='12.04.html'>12.04</a><li><a href='12.11.html'>12.11</a><li><a href='12.24.html'>12.24</a><li><a href='01.07.html'>01.07</a></li></li></ul></ul><li><a href='設定ssh.html'>設定ssh</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,8 +133,24 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w8 << <a href='w8.html'>Previous</a> <a href='RokiSim.html'>Next</a> >> RokiSim<br /><h1>tcc</h1>
-<br />w8 << <a href='w8.html'>Previous</a> <a href='RokiSim.html'>Next</a> >> RokiSim</div>
+    <div id="tipue_search_content">w8 << <a href='w8.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3<br /><h1>tcc</h1>
+<p>修改start.bat裡的程式碼</p>
+<p>set path_portablegit=%Disk%:\Portablegit\bin;<br/>set path_julia=%Disk%:\julia-1.5.2\bin;<br/>set path_tcc=%Disk%:\tcc\;<br/> <br/>path=%Disk%:;%path_python%;%path_portablegit%;%path_julia%;%path_tcc%;%path%;</p>
+<p><img alt="" height="521" src="./../images/tcc-1.png" width="400"/></p>
+<p></p>
+<p>重新開啟start.bat</p>
+<p>在黑窗輸入tcc，出現下圖代表成功</p>
+<p><img alt="" height="261" src="./../images/tcc2.png" width="500"/></p>
+<p></p>
+<p>打開資料夾的cpp.properties 拉到白窗</p>
+<p><img alt="" height="521" src="./../images/tcc4.png" width="400"/></p>
+<p></p>
+<p>找到476行，並修改</p>
+<p>ccopts=-pedantic -Os<br/>#cc=g++ $(ccopts) -c $(FileNameExt) -o $(FileName).o<br/>#ccc=gcc $(ccopts) -c $(FileNameExt) -o $(FileName).o<br/>cc=y:/tcc/tcc.exe -run<br/>ccc=y:/tcc/tcc.exe -run<br/> <br/>make.command=make<br/>command.compile.*.c=$(ccc) -std=c99<br/>command.build.*.c=$(make.command)<br/>command.build.*.h=$(make.command)<br/>command.clean.*.c=$(make.command) clean<br/>command.clean.*.h=$(make.command) clean<br/>command.go.*.c=$(cc) $(FileNameExt)<br/>#command.go.*.c=./$(FileName)<br/># To make the Go command both compile (if needed) and execute, use this setting:</p>
+<p><img alt="" height="521" src="./../images/tcc1.png" width="400"/></p>
+<p>案save</p>
+<p>測試</p>
+<p><img alt="" height="521" src="./../images/tcc5.png" width="400"/></p><br />w8 << <a href='w8.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3</div>
         
     <!-- footer -->
       <div class="container">
